@@ -1,14 +1,9 @@
 import React from 'react'
-import { createStore } from 'redux'
-import { Provider } from 'react-redux'
 
 import Header from './components/Header'
 import AddedFeatures from './components/AddedFeatures'
 import AdditionalFeatures from './components/AdditionalFeatures'
 import Total from './components/Total'
-import { priceReducer } from './reducers/priceReducer'
-
-const store = createStore(priceReducer)
 
 const App = () => {
   const state = {
@@ -29,18 +24,16 @@ const App = () => {
   }
 
   return (
-    <Provider store = {store}>
-      <div className="boxes">
-        <div className="box">
-          <Header car={state.car} />
-          <AddedFeatures car={state.car} />
-        </div>
-        <div className="box">
-          <AdditionalFeatures additionalFeatures={state.additionalFeatures} />
-          <Total car={state.car} additionalPrice={state.additionalPrice} />
-        </div>
+    <div className="boxes">
+      <div className="box">
+        <Header />
+        <AddedFeatures />
       </div>
-    </Provider>
+      <div className="box">
+        <AdditionalFeatures />
+        <Total />
+      </div>
+    </div>
   )
 }
 

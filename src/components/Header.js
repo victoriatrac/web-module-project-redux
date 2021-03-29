@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-// import { updatePrice } from '../actions'
+import { addFeatures } from '../actions'
 
 const Header = props => {
 
@@ -11,20 +11,15 @@ const Header = props => {
         <img src={props.car.image} alt={props.car.name} />
       </figure>
       <h2>{props.car.name}</h2>
-      {/* <p>Amount: ${props.additionalPrice}</p> */}
       <p>Amount: ${props.car.price}</p>
     </>
   )
 }
 
-// const mapStateToProps = state => {
-//   return {
-//     //state update
-//     //editing: state.title.editing
-//     // additionalPrice: state.additionalPrice
-//   }
-// }
+const mapStateToProps = state => {
+  return {
+    car: state.car
+  }
+}
 
-export default Header
-
-// export default connect(mapStateToProps, { updatePrice })(Header)
+export default connect(mapStateToProps, { addFeatures })(Header)

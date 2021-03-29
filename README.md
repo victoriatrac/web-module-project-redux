@@ -58,11 +58,11 @@ This project was put together using create-react-app (CRA). You will not need to
 ```text
 [x] Set up "empty" reducer and initial state 👉
 [x] Set up store and Provider 👉
-[ ] Connect components 👉
-[ ] Add events and event handlers in UI 👉
-[ ] Build action creators 👉
-[ ] write the reducer logic for the actions 👉
-[ ] Rinse and repeat
+[x] Connect components 👉
+[x] Add events and event handlers in UI 👉
+[x] Build action creators 👉
+[x] write the reducer logic for the actions 👉
+[x] Rinse and repeat
 ```
 
 #### _MVP Requirements:_

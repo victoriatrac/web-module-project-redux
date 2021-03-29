@@ -1,8 +1,24 @@
-export const UPDATE_PRICE = 'UPDATE_PRICE'
+export const ADD_FEATURES = 'ADD_FEATURES'
+export const REMOVE_FEATURES = 'REMOVE_FEATURES'
+export const TOTAL = 'TOTAL'
 
-export const updatePrice = newPrice => {
+export const addFeatures = feature => {
     return {
-        type: UPDATE_PRICE,
-        payload: newPrice + 666
+        type: ADD_FEATURES,
+        payload: feature
+    }
+}
+
+export const removeFeatures = feature => {
+    return {
+        type: REMOVE_FEATURES,
+        payload: feature
+    }
+}
+
+export const total = additionalPrice => {
+    return {
+        type: TOTAL,
+        payload: additionalPrice
     }
 }
