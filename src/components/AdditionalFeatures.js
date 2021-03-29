@@ -1,5 +1,5 @@
-import React from 'react';
-import AdditionalFeature from './AdditionalFeature';
+import React from 'react'
+import AdditionalFeature from './AdditionalFeature'
 
 const AdditionalFeatures = props => {
   return (
@@ -15,7 +15,7 @@ const AdditionalFeatures = props => {
         <p>Nice looking car!</p>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default AdditionalFeatures;
+export default AdditionalFeatures
